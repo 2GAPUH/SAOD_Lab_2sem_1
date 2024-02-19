@@ -17,11 +17,15 @@ private:
 	};
 
 	Node* table = nullptr;
+	int size = 0;
 
 	int HashFunction(std::string& key);
-
 public:
+	void Print();
+	void DeleteChar(char simb);
+
 	HashTable();
+	HashTable(int size);
 	~HashTable();
 	void Insert(std::string& key);
 	int Search(std::string& key);
